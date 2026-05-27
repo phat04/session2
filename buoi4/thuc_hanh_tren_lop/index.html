@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="circle"></div>
+
+    <script>
+      const circle = document.querySelector(".circle");
+      let statrtTime = 2000;
+      let currentTime = Date.now();
+      console.log(currentTime);
+
+      while (Date.now() - currentTime < statrtTime) {
+        // Do nothing, just wait
+      }
+      console.log(statrtTime);
+      circle.classList.add("zoom-in");
+    </script>
+  </body>
+</html>

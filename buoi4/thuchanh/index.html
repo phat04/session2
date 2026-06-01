@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="handleSubmit(event)">
+      <input type="text" name="name" placeholder="Name" />
+      <input type="number" name="age" placeholder="Age" />
+      <select name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <button type="submit">Add Student</button>
+    </form>
+    <div id="student-list">
+      <input
+        type="number"
+        id="student-id"
+        placeholder="Enter student ID to remove"
+      />
+
+      <button type="button" onclick="removeStudent()">Remove</button>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

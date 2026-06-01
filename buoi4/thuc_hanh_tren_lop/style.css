@@ -1,1 +1,0 @@
-body{display:flex;justify-content:center;align-items:center;height:100vh}body .circle{width:200px;height:200px;background-color:red;border-radius:50%;transition:all 5s linear}body .zoom-in{width:1000px;height:1000px}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Event Bubbling</title>
+    <style>
+      .parent {
+        width: 300px;
+        height: 200px;
+        background-color: lightblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <button class="child">Child Button</button>
+    </div>
+
+    <script>
+      const parent = document.querySelector(".parent");
+      const child = document.querySelector(".child");
+
+      parent.addEventListener("click", function () {
+        console.log("Parent được click");
+      });
+
+      child.addEventListener("click", function (e) {
+        console.log("Child được click");
+
+        // Ngăn sự kiện nổi bọt lên phần tử cha
+        e.stopPropagation();
+      });
+    </script>
+  </body>
+</html>

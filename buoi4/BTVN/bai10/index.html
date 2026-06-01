@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Switcher</title>
+
+    <style>
+      body {
+        text-align: center;
+        padding-top: 100px;
+        transition: background-color 0.3s ease;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+      #color-name {
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="change-btn">Change Background</button>
+
+    <p id="color-name">Màu hiện tại: Chưa có</p>
+
+    <script>
+      const colors = ["red", "blue", "green", "yellow", "purple"];
+
+      const btn = document.querySelector("#change-btn");
+      const colorName = document.querySelector("#color-name");
+
+      btn.addEventListener("click", () => {
+        const randomIndex = Math.floor(Math.random() * colors.length);
+
+        const randomColor = colors[randomIndex];
+
+        document.body.style.backgroundColor = randomColor;
+
+        colorName.textContent = `Màu hiện tại: ${randomColor}`;
+      });
+    </script>
+  </body>
+</html>
